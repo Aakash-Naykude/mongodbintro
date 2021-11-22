@@ -99,3 +99,6 @@ db.user.deleteMany({"gender" : "Female"})
 
  db.dropDatabase
  //to delete database
+
+ctrl + c
+// for exit from database
