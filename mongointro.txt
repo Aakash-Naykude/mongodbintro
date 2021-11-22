@@ -1,0 +1,101 @@
+show dbs
+// above is user for to see databases in pc
+show databases
+//same command
+
+
+
+db.dropDatabase()
+//to delete any database
+
+
+
+use test
+//this will create database named as test
+
+db.help()
+//this will show possible operations on database test
+
+
+db.user.insert({firstname:"aakash"})
+//this will create collection (user) inside test database and it will instert the inserted value
+
+
+show collections
+//this will show collections inside test(database)
+
+
+db.user.drop()
+//this will drop collection from test
+
+
+
+db.user.insert({firstname:"aakash"})
+//this will insert single input into database
+
+
+db.user.insertMany([{firstname: "abhi"},{age:"23"}, {city: "satara"}])
+//this will insert multiple input into database
+
+
+
+mongo
+//this will give instrction about mongo and which server it is working upon
+//then copy connecting to connection from there and use it in mongocompass
+
+//we can import data in mongocompass 
+
+
+db.find().preety()
+// to show database in good format
+db.user.find({"gender":"Male"})
+//this will search all gender Male
+
+db.user.findOne({"gender":"Male"})
+//find first gender Male
+
+
+
+
+
+//update & delete are permanent operations which will do changes in database permanently
+db.user.update({"_id" : ObjectId("619bc14aea0f57a379e880cd")}, {"last_name": "aakash"})
+//this will change entire object because we are not passing {$set:{}}
+
+
+
+db.user.update({"_id" : ObjectId("619bc14aea0f57a379e880cd")}, {$set:{"last_name": "aakash"}})
+//this will update single insert
+
+
+
+db.user.updateMany({"gender":"Male"}, {$set:{"gender": "Female", "email":"123"}})
+//this will update all object with Male
+
+
+
+db.user.reomve({"lastname":"naykude"})
+//this will reomve all lastname with naykude or one lastname with naykude 
+//reomve works for removeMany as well as removeOne
+
+
+db.user.reomve({"lastname":"naykude"}, 2)
+//to delete quantity of objects
+
+
+
+db.user.deleteOne({"gender" : "Genderfluid"})
+//to delete only one object
+
+
+
+db.user.deleteMany({"gender" : "Female"})
+//to delete many
+
+
+ db.user.drop() 
+ //drop the collection
+
+
+ db.dropDatabase
+ //to delete database
