@@ -111,4 +111,4 @@ db.test.find().skip(10).limit(10)
 
 
 
-db.test.find().limit(10).forEach(("moviegerne")=>{return delete("moviegerne")})
+db.movies.find({}).sort({production:-1, moviename:-1}).pretty().limit(10).forEach(function(doc){db.movies.update({_id: doc._id}, {$unset:{"moviegerne": ""}})})
